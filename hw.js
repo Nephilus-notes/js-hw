@@ -51,7 +51,7 @@ let evenOrOdd =function(num) {
     return 'Even'
 }
 
-console.log(evenOrOdds(5))
+console.log(evenOrOdd(5))
 
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, 
 // we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -73,3 +73,31 @@ function threesOrFives(num) {
 } 
 
 console.log(threesOrFives(15))
+
+// Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+// Examples
+// [7] should return 7, because it occurs 1 time (which is odd).
+// [0] should return 0, because it occurs 1 time (which is odd).
+// [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+
+
+// (condition) ? (if true) : (if false)
+function findOdd(A) {
+    const myObj = {}
+    for (let num of A) {
+        myObj[num] = myObj[num] +1 || 1
+    } for (let count in myObj) {
+        if (myObj[count] % 2 === 1) {
+            return count
+        }
+    }
+}
+
+console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]))
+// myObj.count = myObj.count ? myObj.count + 1 : 1
+// myObj.count = myObj.count + 1 || 1
