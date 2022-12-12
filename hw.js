@@ -93,7 +93,7 @@ function findOdd(A) {
         myObj[num] = myObj[num] +1 || 1
     } for (let count in myObj) {
         if (myObj[count] % 2 === 1) {
-            return count
+            return parseInt(count)
         }
     }
 }
